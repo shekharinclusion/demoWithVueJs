@@ -87,6 +87,7 @@ export default {
             api: 'http://127.0.0.1:8000/api/get_users',
             api_store: 'http://127.0.0.1:8000/api/store/',
             api_delete: 'http://127.0.0.1:8000/api/delete/',
+
         }
     },
     setup() {

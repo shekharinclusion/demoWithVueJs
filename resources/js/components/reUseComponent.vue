@@ -10,7 +10,7 @@
             {{item.age}}
         </li>
     </ul>
-    <button v-on:click="reUseFunction">click me </button>
+    <button v-on:click="reUseFunction()">click me </button> <br/>
 
 </template>
 <script>

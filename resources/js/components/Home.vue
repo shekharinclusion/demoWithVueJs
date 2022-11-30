@@ -26,14 +26,35 @@
 
     <h1>dynamic add and remove calsses </h1>
     <dyNamicAddRemoveClasses />
+    <br/> <button v-on:click="childToPerentransferData()">pass data child to parent</button>
     <br />
-    <h1>pass data child to parent </h1>
-    <childToPerentransferData :getData="getDataChildComponent" />
+
+    <childToPerentransferData  v-if="childToPerentranscomponet" :getData="getDataChildComponent" />
+    <br />
+
+    <button v-on:click="ref_componet()">ref in vue</button>
+    <ref v-if="refComponet"/>
+
+    <br /><br />
+    <Form  v-if="formShow" />
+    <button v-on:click="getFormValue()">form value get </button>
+
+    <br />
+    <Modifier/>
+
+    <br />
+    <NonPropsAndProps data="this is data !!" id="user-cmd" />
+
 </template>
 <script>
-import reUseComponet from './reuseComponent.vue'
-import dyNamicAddRemoveClasses from './dyNamicAddRemoveClasses.vue'
-import childToPerentransferData from './childToPerentransferData.vue'
+import reUseComponet from './reuseComponent.vue';
+import dyNamicAddRemoveClasses from './dyNamicAddRemoveClasses.vue';
+import childToPerentransferData from './childToPerentransferData.vue';
+// import childToPerentransferData from './childToPerentransferData.vue';
+import ref from './ref.vue';
+import Form from './form.vue';
+import Modifier from './modifier.vue';
+import NonPropsAndProps from './nonPropsAndProps.vue';
 export default {
     name: 'Home',
     props: {
@@ -43,10 +64,17 @@ export default {
     components:{
         reUseComponet,
         dyNamicAddRemoveClasses,
-        childToPerentransferData
+        childToPerentransferData,
+        ref,
+        Form,
+        Modifier,
+        NonPropsAndProps
     },
     data() {
         return {
+            refComponet:false,
+            childToPerentranscomponet:false,
+            formShow:false,
             email: 'sample@gmail.com ',
             name: null,
             email: null,
@@ -87,7 +115,18 @@ export default {
         },
         getDataChildComponent(name){
             alert(name);
+        },
+        ref_componet(){
+            this.refComponet=!this.refComponet;
+            console.log(this.refComponet);
+        },
+        childToPerentransferData(){
+            this.childToPerentranscomponet=!this.childToPerentranscomponet;
+        },
+        getFormValue(){
+            this.formShow=!this.formShow;
         }
+
     }
 }
 </script>

@@ -1,8 +1,10 @@
 <template>
-    <h3>
-        this is reuse childToPerentransferData......
-    </h3>
-    <button v-on:click="getData(name)">send data child to parent </button>
+
+    <input style="    margin-top: 10px;
+    border: 3px solid;
+    color: black;" type="text" v-model="name" ><br />
+    <h4> binding data</h4>
+    <button style="    margin-top: 5px;" v-on:click="getData(name)">send data child to parent </button>
 
 
 </template>
@@ -14,7 +16,7 @@ export default{
 
     data(){
         return{
-            name:'shekhar chauhan',
+            name:'',
 
         }
     },

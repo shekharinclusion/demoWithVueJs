@@ -45,6 +45,33 @@
     <br />
     <NonPropsAndProps data="this is data !!" id="user-cmd" />
 
+    <br />
+    <Computed />
+
+    <br />
+    <Watcher />
+
+    <br />
+    <Slot ><h1>pass html tag useing slot</h1> </Slot>
+    <Slot ><img src="https://i.picsum.photos/id/769/200/300.jpg?hmac=cl3KEs924CuE_nF1wC98S7NBc8JPXkf0hlwtPXGIIhM" alt=""> </Slot>
+    <Slot msg="pass data by props" />
+
+    <br />
+    <!-- <MultipulSlotOneComponet ><h1>pass html tag useing slot</h1> </MultipulSlotOneComponet>
+    <MultipulSlotOneComponet ><img src="https://i.picsum.photos/id/769/200/300.jpg?hmac=cl3KEs924CuE_nF1wC98S7NBc8JPXkf0hlwtPXGIIhM" alt=""> </MultipulSlotOneComponet>
+    <MultipulSlotOneComponet msg="pass data by props" /> -->
+    <MultipulSlotOneComponet >
+        <template v-slot:first>
+            <h1>this is first slot </h1>
+        </template>
+        <template v-slot:second>
+            <h1>this is first second </h1>
+        </template>
+        <template v-slot:last>
+            <h1>this is first last </h1>
+        </template>
+
+    </MultipulSlotOneComponet>
 </template>
 <script>
 import reUseComponet from './reuseComponent.vue';
@@ -55,6 +82,10 @@ import ref from './ref.vue';
 import Form from './form.vue';
 import Modifier from './modifier.vue';
 import NonPropsAndProps from './nonPropsAndProps.vue';
+import Computed from './computed.vue';
+import Watcher from './watcher.vue';
+import Slot from './slot.vue';
+import MultipulSlotOneComponet from './multipulSlotOneComponet.vue';
 export default {
     name: 'Home',
     props: {
@@ -68,7 +99,11 @@ export default {
         ref,
         Form,
         Modifier,
-        NonPropsAndProps
+        NonPropsAndProps,
+        Computed,
+        Watcher,
+        Slot,
+        MultipulSlotOneComponet
     },
     data() {
         return {

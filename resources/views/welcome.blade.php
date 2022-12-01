@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     </head>
     <body class="antialiased">
-        <div id="app">
+        <div id="app" style="margin-left: 20px;">
             <app />
         </div>
 

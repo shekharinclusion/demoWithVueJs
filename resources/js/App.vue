@@ -13,6 +13,7 @@
                 </div>
                 <div class="modal-body">
                     <form enctype='multipart/form-data'>
+
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name</label>
                             <input type="text" class="form-control" v-model="name">

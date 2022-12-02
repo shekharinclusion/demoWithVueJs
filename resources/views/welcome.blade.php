@@ -18,6 +18,9 @@
         <div id="app" style="margin-left: 20px;">
             <app />
         </div>
+        <div id="footer" style="margin-left: 20px;">
+
+        </div>
 
         <script src="{{asset('js/app.js')}}"></script>
     </body>

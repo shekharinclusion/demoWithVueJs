@@ -72,6 +72,15 @@
         </template>
 
     </MultipulSlotOneComponet>
+
+    <br/>
+    <DynamicComponent />
+
+    <br/>
+    <!-- <Footer /> -->
+    <teleport to="#footer"><Footer /></teleport>
+    <!-- <DynamicComponent /> -->
+
 </template>
 <script>
 import reUseComponet from './reuseComponent.vue';
@@ -86,6 +95,8 @@ import Computed from './computed.vue';
 import Watcher from './watcher.vue';
 import Slot from './slot.vue';
 import MultipulSlotOneComponet from './multipulSlotOneComponet.vue';
+import DynamicComponent from './DynamicComponent.vue';
+import Footer from './teleportComponet/footer.vue';
 export default {
     name: 'Home',
     props: {
@@ -103,10 +114,13 @@ export default {
         Computed,
         Watcher,
         Slot,
-        MultipulSlotOneComponet
+        MultipulSlotOneComponet,
+        DynamicComponent,
+        Footer
     },
     data() {
         return {
+
             refComponet:false,
             childToPerentranscomponet:false,
             formShow:false,
@@ -165,3 +179,15 @@ export default {
     }
 }
 </script>
+
+<style>
+button {
+    width: 68px;
+    padding: -2px;
+    background-color: #4bb2ff;
+
+    color: white;
+    border: solid;
+}
+
+</style>

@@ -25,3 +25,12 @@ Route::post('store',[UserController::class,'store']);
 Route::post('delete/{id}',[UserController::class,'delete']);
 
 
+//crud
+Route::post('store_form_data',[UserController::class,'store_form_data']);
+Route::get('get_form_data',[UserController::class,'get_form_data']);
+Route::post('store_form',function(){
+    return 11;
+});
+
+
+

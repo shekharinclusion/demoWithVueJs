@@ -77,6 +77,14 @@
     <DynamicComponent />
 
     <br/>
+    <br/>
+    <beforCreateAndCreate />
+
+    <br/>
+    <br/>
+    <beforMountAndMounted />
+
+    <br/>
     <!-- <Footer /> -->
     <teleport to="#footer"><Footer /></teleport>
     <!-- <DynamicComponent /> -->
@@ -97,6 +105,8 @@ import Slot from './slot.vue';
 import MultipulSlotOneComponet from './multipulSlotOneComponet.vue';
 import DynamicComponent from './DynamicComponent.vue';
 import Footer from './teleportComponet/footer.vue';
+import beforCreateAndCreate from './lifeSycle/beforCreateAndCreate.vue';
+import beforMountAndMounted from './lifeSycle/beforMountAndMounted.vue';
 export default {
     name: 'Home',
     props: {
@@ -116,7 +126,9 @@ export default {
         Slot,
         MultipulSlotOneComponet,
         DynamicComponent,
-        Footer
+        Footer,
+        beforCreateAndCreate,
+        beforMountAndMounted
     },
     data() {
         return {

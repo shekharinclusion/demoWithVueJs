@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\Log;
@@ -52,4 +53,27 @@ class UserController extends Controller
         return $id->delete();
         return 'success';
     }
+
+
+
+    //crud
+    public function store_form_data(Request $request)
+    {
+        // return 11;
+       $user= new UserInfo();
+        $user->username=$request->username;
+        $user->recipientName=$request->recipient;
+        $user->url=$request->url;
+        $user->cost=$request->amount;
+        $user->discreption=$request->textarea;
+        $user->save();
+        return true;
+    }
+    public function get_form_data()
+    {
+       return response()->json(UserInfo::all());
+    }
+
+
+
 }

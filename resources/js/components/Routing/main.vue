@@ -2,15 +2,14 @@
     <br>
     <br>
     <h1>this is render a componet {this is Routning section }   </h1>
-    <router-link to="/java">home</router-link>
-    <router-link to="/php">home</router-link>
+    <router-link to="/home-page">home</router-link>
+    <router-link to="php">list</router-link>
+    <router-view></router-view>
 </template>
 <script>
 
 import route from '../route.js'
-import java from './java.vue'
-import php from './php.vue'
-import Vue from './vue.vue'
+
 
 export default {
 
@@ -22,9 +21,7 @@ data() {
 
     }
 },
-components:{
-    java,php,Vue
-},
+
 
 
 }

@@ -5,8 +5,8 @@ import php from './Routing/php.vue';
 
 const routes=[
      {
-        name:'java',
-        path:'/java',
+        name:'home',
+        path:'/:name',
         component:java,
      },
      {
@@ -17,6 +17,8 @@ const routes=[
 ]
 const route=createRouter({
     history:createWebHashHistory(),
+    hashbang: false,
+    fallback: true,
     routes
 })
 

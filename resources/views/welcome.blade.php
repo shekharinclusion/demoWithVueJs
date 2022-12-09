@@ -14,13 +14,18 @@
 
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     </head>
-    <body class="antialiased">
+    <body class="antialiased" style="    background-color: #f5e1e1;">
         <div id="app" style="margin-left: 20px;">
             <app />
         </div>
-        <div id="footer" style="margin-left: 20px;">
+        {{-- <div id="footer" style="margin-left: 20px;"> --}}
 
         </div>
+
+
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
 
         <script src="{{asset('js/app.js')}}"></script>
     </body>
